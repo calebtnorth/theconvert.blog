@@ -1,0 +1,28 @@
+/* Initial force, to be overwritten later */
+* {
+    margin:     0px !important;
+    padding:    0px !important;
+    border:     0px !important;
+}
+
+/* Body */
+body {
+    overflow: hidden;
+}
+
+#body-content {
+    height: 100vh;
+    width: 100vw;
+}
+
+#body-img {
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 100%;
+
+    background-color: red;
+    background-image: url(img/temp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
