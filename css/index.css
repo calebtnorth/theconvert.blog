@@ -43,7 +43,9 @@ SOFTWARE.
     border:     0px !important;
 
     /* Font Stuff */
-    font-family: serif !important;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
 
     /* Universal Decoration */
     transition: border-color var(--animation-time);
@@ -98,15 +100,26 @@ body
     background-position: center; 
     
     /* Children */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; */
 }
 
 /* Logo */
-#body-splash img
+#body-logo
 {
-    max-width: 50%;
+    position: relative;
+
+    top: 25vh;
+    max-width: 100%;
+    max-height: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#body-logo img {
+    width: 50%;
 }
 
 
@@ -145,8 +158,10 @@ body
     margin: 0px var(--entry-hpadding) !important;
 
     /* Decoration */
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
     font-size: 50px !important;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Section Entry Container */
@@ -179,7 +194,7 @@ body
 .section-entry .entry-title
 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .section-entry .entry-subtitle
 {
@@ -193,7 +208,7 @@ body
     left: calc(var(--section-padding) / 2);
 
     color: red;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /* Share Button */
