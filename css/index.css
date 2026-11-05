@@ -204,6 +204,10 @@ body
     color: red;
     font-weight: 700;
 }
+.section-entry:nth-of-type(n + 2) .entry-new
+{
+    display: none;
+}
 
 /* Share Button */
 .entry-share
