@@ -145,12 +145,18 @@ body
 .section
 {
     /* Positiong and Sizing */
-    margin: var(--section-padding) !important;
+    padding: var(--section-padding) !important;
+    box-sizing: border-box;
+    width: 100%;
 }
 .section-title
 {
     /* Position and Spacing */
-    margin: 0px var(--entry-hpadding) !important;
+
+    margin:
+        0px /* Add 2px to match entry body */
+        calc(var(--entry-hpadding) + 2px)
+    !important;
 
     /* Decoration */
     font-size: 33px !important;
@@ -167,10 +173,10 @@ body
     margin: var(--entry-vpadding) 0px !important;
 
     box-sizing: border-box;
+    width: 100%;
 
     /* Decoration */
     cursor: pointer;
-    text-align: justify;
     border: 2px solid transparent !important;
 
     /* Children */
@@ -185,12 +191,21 @@ body
 }
 
 /* Section Entry Parts */
-.section-entry .entry-title
+.entry-body
+{
+    width: 100%;
+}
+.entry-body *
+{
+    text-align: justify;
+    text-justify: newspaper;
+}
+.entry-title
 {
     font-size: 20px;
     font-weight: 700;
 }
-.section-entry .entry-subtitle
+.entry-subtitle
 {
     font-size: 15px;
 }
