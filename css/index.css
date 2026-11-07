@@ -59,12 +59,6 @@ SOFTWARE.
     /* Universal Decoration */
     transition: border-color var(--animation-time);
 }
-html[data-platform="mobile"] *
-{
-    --section-title-font-size:      64px;
-    --entry-title-font-size:        40px;
-    --entry-text-font-size:         28px;
-}
 
 body
 {
@@ -261,6 +255,14 @@ body
 /********************/
 /* MOBILE OVERRIDES */
 /********************/
+
+
+html[data-platform="mobile"] *
+{
+    --section-title-font-size:      64px;
+    --entry-title-font-size:        40px;
+    --entry-text-font-size:         28px;
+}
 
 
 @media screen and (aspect-ratio < 1) {
