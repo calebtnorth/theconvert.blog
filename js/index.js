@@ -6,10 +6,9 @@ function addSection(section_title)
 
     // Set up element
     element.querySelector(".section-title").textContent = section_title.toUpperCase();
-    for (let i = 0; i < 3; i++)
-    {
-        element.querySelector(".section").appendChild(addEntry("Title " + i, "Subtitle " + i));
-    }
+    element.querySelector(".section").appendChild(
+        addEntry("Windw", navigator.maxTouchPoints.toString())
+    );
 
     return element;
 }
@@ -27,14 +26,14 @@ function addEntry(title, subtitle)
     return element;
 }
 
-for (let i = 0; i < 2; i++){
 document.querySelector("#sections").appendChild(
     addSection("Section")
 );
-}
 
 // Mobile Check
 if (navigator.userAgentData.mobile || 'ontouchstart' in window || navigator.maxTouchPoints > 0)
 {
     document.documentElement.dataset.platform = "mobile";
 }
+console.log(navigator.userAgent);
+console.log(window);
