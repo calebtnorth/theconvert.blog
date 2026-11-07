@@ -32,3 +32,9 @@ document.querySelector("#sections").appendChild(
     addSection("Section")
 );
 }
+
+// Mobile Check
+if (navigator.userAgentData.mobile)
+{
+    document.documentElement.dataset.platform = "mobile";
+}

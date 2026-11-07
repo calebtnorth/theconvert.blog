@@ -58,6 +58,11 @@ SOFTWARE.
     /* Universal Decoration */
     transition: border-color var(--animation-time);
 }
+*[platform="mobile"] {
+    --section-title-font-size:      96px;
+    --entry-title-font-size:        60px;
+    --entry-text-font-size:         42px;
+}
 
 body
 {
@@ -324,14 +329,5 @@ body
     .entry-share
     {
         display: none !important;
-    }
-}
-
-
-@media (pointer:none), (pointer:coarse) {
-    * {
-        --section-title-font-size:      96px;
-        --entry-title-font-size:        60px;
-        --entry-text-font-size:         42px;
     }
 }
