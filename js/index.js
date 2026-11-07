@@ -6,7 +6,7 @@ function addSection(section_title)
 
     // Set up element
     element.querySelector(".section-title").textContent = section_title.toUpperCase();
-    for (let i = 0; i < 10; i++)
+    for (let i = 0; i < 3; i++)
     {
         element.querySelector(".section").appendChild(addEntry("Title " + i, "Subtitle " + i));
     }
@@ -27,7 +27,7 @@ function addEntry(title, subtitle)
     return element;
 }
 
-for (let i = 0; i < 10; i++){
+for (let i = 0; i < 2; i++){
 document.querySelector("#sections").appendChild(
     addSection("Section")
 );

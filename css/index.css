@@ -29,7 +29,11 @@ SOFTWARE.
 
 * {
     /* Variables */
-    --section-padding: 10%;
+    --sections-list-padding: 20%;
+
+    --section-vpadding: 5%;
+    --section-hpadding: 10%;
+
     --entry-vpadding: 5px;
     --entry-hpadding: 20%;
 
@@ -133,7 +137,10 @@ body
 
     overflow-y: scroll !important;
     overflow-x: hidden !important;
-        
+
+    padding: var(--sections-list-padding) 0px !important;
+    box-sizing: border-box;
+
     /* Children */
     display: flex;
     flex-direction: column;
@@ -145,7 +152,7 @@ body
 .section
 {
     /* Positiong and Sizing */
-    padding: var(--section-padding) !important;
+    padding: var(--section-vpadding) var(--section-hpadding) !important;
     box-sizing: border-box;
     width: 100%;
 }
@@ -159,7 +166,6 @@ body
     !important;
 
     /* Decoration */
-    font-size: 33px !important;
     font-family: "Uncial Antiqua", serif;
     font-weight: 500;
 }
@@ -202,19 +208,14 @@ body
 }
 .entry-title
 {
-    font-size: 20px;
     font-weight: 700;
-}
-.entry-subtitle
-{
-    font-size: 15px;
 }
 
 /* New Text */
 .entry-new
 {
     position: absolute;
-    left: calc(var(--section-padding) / 2);
+    left: calc(var(--section-hpadding) / 2);
 
     color: red;
     font-weight: 700;
@@ -229,7 +230,7 @@ body
 {
     /* Position and Spacing */
     position: absolute;
-    right: calc(var(--section-padding) / 2);
+    right: calc(var(--section-hpadding) / 2);
 
     height: var(--share-button-size) !important;
 
@@ -254,7 +255,9 @@ body
     /*****************/
 
     * {
+        --sections-list-padding: 5%;
         --section-padding: 10%;
+
         --entry-vpadding: 10px;
         --entry-hpadding: 20px;
     }
@@ -294,7 +297,7 @@ body
 
     #sections
     {
-        justify-content: flex-start;
+        justify-content: flex-start !important;
     }
 
     .section-entry
