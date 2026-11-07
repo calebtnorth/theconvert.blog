@@ -29,9 +29,3 @@ function addEntry(title, subtitle)
 document.querySelector("#sections").appendChild(
     addSection("Section")
 );
-
-// Mobile Check
-if (navigator.maxTouchPoints > 0)
-{
-    document.documentElement.dataset.platform = "mobile";
-}
