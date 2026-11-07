@@ -34,7 +34,7 @@ document.querySelector("#sections").appendChild(
 }
 
 // Mobile Check
-if (navigator.userAgentData.mobile || "ontouchstart" in window)
+if (navigator.userAgentData.mobile || 'ontouchstart' in window || navigator.maxTouchPoints > 0)
 {
     document.documentElement.dataset.platform = "mobile";
 }
