@@ -7,7 +7,7 @@ function addSection(section_title)
     // Set up element
     element.querySelector(".section-title").textContent = section_title.toUpperCase();
     element.querySelector(".section").appendChild(
-        addEntry("Windw", navigator.maxTouchPoints.toString())
+        addEntry("Entry Title", "January 01 1970")
     );
 
     return element;
@@ -34,9 +34,4 @@ document.querySelector("#sections").appendChild(
 if (navigator.maxTouchPoints > 0)
 {
     document.documentElement.dataset.platform = "mobile";
-    document.querySelector("#sections").appendChild(
-        addSection("Mobile")
-    );
 }
-console.log(navigator.userAgent);
-console.log(window);
