@@ -29,17 +29,21 @@ SOFTWARE.
 
 * {
     /* Variables */
-    --sections-list-padding: 20%;
+    --sections-list-padding:        20%;
 
-    --section-vpadding: 5%;
-    --section-hpadding: 7.5%;
+    --section-vpadding:             5%;
+    --section-hpadding:             7.5%;
 
-    --entry-vpadding: 7.5px;
-    --entry-hpadding: 20%;
+    --entry-vpadding:               7.5px;
+    --entry-hpadding:               20%;
 
-    --animation-time: 333ms;
+    --animation-time:               333ms;
 
-    --share-button-size: 24px;
+    --section-title-font-size:      32px;
+    --entry-title-font-size:        20px;
+    --entry-text-font-size:         14px;
+
+    --share-button-size:            24px;
 
     /* Initial force, to be overwritten later */
     margin:     0px !important;
@@ -166,11 +170,18 @@ body
     !important;
 
     /* Decoration */
+    font-size: var(--section-title-font-size);
     font-family: "Uncial Antiqua", serif;
     font-weight: 500;
 }
 
 /* Section Entry Container */
+.section-entry *
+{
+    font-size: var(--entry-text-font-size);
+    text-align: justify;
+    text-justify: newspaper;
+}
 .section-entry
 {
     /* Position and Spacing */
@@ -201,13 +212,9 @@ body
 {
     width: 100%;
 }
-.entry-body *
-{
-    text-align: justify;
-    text-justify: newspaper;
-}
 .entry-title
 {
+    font-size: var(--entry-title-font-size);
     font-weight: 700;
 }
 
@@ -317,5 +324,14 @@ body
     .entry-share
     {
         display: none !important;
+    }
+}
+
+
+@media (pointer:none), (pointer:coarse) {
+    * {
+        --section-title-font-size:      96px;
+        --entry-title-font-size:        60px;
+        --entry-text-font-size:         42px;
     }
 }
