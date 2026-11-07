@@ -31,9 +31,12 @@ document.querySelector("#sections").appendChild(
 );
 
 // Mobile Check
-if (navigator.userAgentData.mobile || 'ontouchstart' in window || navigator.maxTouchPoints > 0)
+if (navigator.maxTouchPoints > 0)
 {
     document.documentElement.dataset.platform = "mobile";
+    document.querySelector("#sections").appendChild(
+        addSection("Mobile")
+    );
 }
 console.log(navigator.userAgent);
 console.log(window);
