@@ -229,15 +229,15 @@ SOFTWARE.
 /********************/
 
 
-html[data-platform="mobile"] *
-{
-    --h1-title-font-size:      64px;
-    --h3-title-font-size:        40px;
-    --p-text-font-size:         28px;
-}
-
-
 @media screen and (aspect-ratio < 1.2) {
+
+    html[data-platform="mobile"] *
+    {
+        --h1-title-font-size:   64px;
+        --h3-title-font-size:   40px;
+        --p-text-font-size:     28px;
+    }
+
     /*****************/
     /* Document Wide */
     /*****************/

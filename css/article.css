@@ -163,18 +163,70 @@ body
 /********************/
 
 
-html
-/* [data-platform="mobile"] * */
-{
-    --h1-title-font-size:      64px !important;
-    --h3-title-font-size:        40px !important;
-    --p-text-font-size:         28px !important;
-}
+
 
 
 @media screen and (aspect-ratio < 1.2) {
-    /*****************/
+   
+    html[data-platform="mobile"] *
+    {
+        --h1-title-font-size:   64px !important;
+        --h3-title-font-size:   40px !important;
+        --p-text-font-size:     28px !important;
+    }
+
     /* Document Wide */
-    /*****************/
-    
+    #body-content
+    {
+        /* Children */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Button */
+    #back-button
+    {
+        display: none !important;
+    }
+
+    /* Overview */
+    #article-overview
+    {
+        /* Position and Sizing */
+        position: relative;
+        width: 100%;
+        height: max-content;
+
+        margin-bottom: calc(var(--site-padding) / 2) !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        /* Children */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #article-overview-buttons
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: right;
+        box-sizing: border-box;
+    }
+    #article-download
+    {
+        margin-left: calc(var(--p-text-font-size) * 2) !important;
+        margin-right: 0px !important;
+    }
+
+    /* Content */
+    #article-content
+    {
+        /* Position and Sizing */
+        position: relative;
+        width: 100%;
+    }
+
 }
