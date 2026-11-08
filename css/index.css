@@ -22,42 +22,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-/*****************/
+/* ************* */
 /* Document Wide */
-/*****************/
-
+/* ************* */
 
 *
 {
-    /* Variables */
-    --sections-list-padding:        20%;
-
     --section-vpadding:             5%;
-    --section-hpadding:             7.5%;
+    --section-hpadding:             0%;
 
     --entry-vpadding:               7.5px;
-    --entry-hpadding:               20%;
+    --entry-hpadding:               25%;
 
-    --animation-time:               333ms;
 
     --section-title-font-size:      32px;
     --entry-title-font-size:        20px;
     --entry-text-font-size:         14px;
-
-    --share-button-size:            24px;
-
-    /* Initial force, to be overwritten later */
-    margin:     0px !important;
-    padding:    0px !important;
-    border:     0px !important;
-
-    /* Font Stuff */
-    font-family: "Inika", serif;
-    font-weight: 400;
-    font-style: normal;
-
-    /* Universal Decoration */
-    transition: border-color var(--animation-time);
 }
 
 body
@@ -143,7 +123,7 @@ body
     overflow-y: scroll !important;
     overflow-x: hidden !important;
 
-    padding: var(--sections-list-padding) 0px !important;
+    padding: var(--site-padding) !important;
     box-sizing: border-box;
 
     /* Children */
@@ -181,7 +161,7 @@ body
 {
     font-size: var(--entry-text-font-size);
     text-align: justify;
-    text-justify: newspaper;
+    text-justify: inter-ideograph;
 }
 .section-entry
 {
@@ -222,9 +202,11 @@ body
 /* New Text */
 .entry-new
 {
+    /* Position and Sizing */
     position: absolute;
-    left: calc(var(--section-hpadding) / 2);
+    left: calc(var(--site-padding) / 2);
 
+    /* Decoration */
     color: red;
     font-weight: 700;
 }
@@ -238,9 +220,9 @@ body
 {
     /* Position and Spacing */
     position: absolute;
-    right: calc(var(--section-hpadding) / 2);
+    right: calc(var(--site-padding) / 2);
 
-    height: var(--share-button-size) !important;
+    height: var(--icon-size) !important;
 
     /* Decoration */    
     opacity: 0;
@@ -265,13 +247,13 @@ html[data-platform="mobile"] *
 }
 
 
-@media screen and (aspect-ratio < 1) {
+@media screen and (aspect-ratio < 1.2) {
     /*****************/
     /* Document Wide */
     /*****************/
 
     * {
-        --sections-list-padding: 5%;
+        --site-padding: 5%;
         --section-padding: 10%;
 
         --entry-vpadding: 10px;

@@ -7,7 +7,7 @@ function addSection(section_title)
     // Set up element
     element.querySelector(".section-title").textContent = section_title.toUpperCase();
     element.querySelector(".section").appendChild(
-        addEntry("Entry Title", "January 01 1970")
+        addEntry("Lorem Ipsum Dolor, Ipsum Lorem", "January 01 1970")
     );
 
     return element;
