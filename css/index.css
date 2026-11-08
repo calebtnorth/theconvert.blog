@@ -33,13 +33,6 @@ SOFTWARE.
 
     --entry-vpadding:               7.5px;
     --entry-hpadding:               25%;
-
-
-    --section-title-font-size:      32px;
-    --entry-title-font-size:        20px;
-    --entry-text-font-size:         14px;
-
-
 }
 
 #body-content
@@ -148,7 +141,7 @@ SOFTWARE.
     !important;
 
     /* Decoration */
-    font-size: var(--section-title-font-size);
+    font-size: var(--h1-title-font-size);
     font-family: "Uncial Antiqua", serif;
     font-weight: 500;
 }
@@ -156,7 +149,7 @@ SOFTWARE.
 /* Section Entry Container */
 .section-entry *
 {
-    font-size: var(--entry-text-font-size);
+    font-size: var(--p-text-font-size);
     text-align: justify;
     text-justify: inter-ideograph;
 }
@@ -192,7 +185,7 @@ SOFTWARE.
 }
 .entry-title
 {
-    font-size: var(--entry-title-font-size);
+    font-size: var(--h3-title-font-size);
     font-weight: 700;
 }
 
@@ -238,9 +231,9 @@ SOFTWARE.
 
 html[data-platform="mobile"] *
 {
-    --section-title-font-size:      64px;
-    --entry-title-font-size:        40px;
-    --entry-text-font-size:         28px;
+    --h1-title-font-size:      64px;
+    --h3-title-font-size:        40px;
+    --p-text-font-size:         28px;
 }
 
 
