@@ -38,11 +38,8 @@ SOFTWARE.
     --section-title-font-size:      32px;
     --entry-title-font-size:        20px;
     --entry-text-font-size:         14px;
-}
 
-body
-{
-    overflow: hidden;
+
 }
 
 #body-content

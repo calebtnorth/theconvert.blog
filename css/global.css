@@ -20,3 +20,8 @@
     /* Universal Decoration */
     transition: border-color var(--animation-time);
 }
+
+body
+{
+    overflow: hidden;
+}
