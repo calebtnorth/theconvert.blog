@@ -4,8 +4,7 @@
 // Mobile Check //
 // ************ //
 
-if (navigator.maxTouchPoints > 0)
-{
+if (navigator.maxTouchPoints > 0) {
     document.documentElement.dataset.platform = "mobile";
 }
 
@@ -15,8 +14,7 @@ if (navigator.maxTouchPoints > 0)
 // *************** //
 
 
-function fetchFile(path)
-{
+function fetchFile(path) {
     return fetch(path)
         .then(response => { return response.text() })
         .then(text => {
@@ -24,15 +22,14 @@ function fetchFile(path)
         });
 }
 
-function fetchArticleXML(path)
-{
+function fetchArticleXML(path) {
     return fetchFile(path).then(text => {
         return new DOMParser().parseFromString(text, "application/xml");
     });
 }
 
-function fetchAllArticles(path)
-{
-
-    
+function fetchArticleManifest() {  
+    return fetchFile("data/manifest.json").then(text => {
+        return JSON.parse(text);
+    });
 }

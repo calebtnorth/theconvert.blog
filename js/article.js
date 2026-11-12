@@ -10,7 +10,17 @@ function addParagraph(content)
     return element;
 }
 
-fetchArticleXML("data/articles/dummy.xml").then(dom => 
+
+// Load article
+const params = new URLSearchParams(window.location.search);
+
+let section = params.get('section');
+let title = params.get('title');
+
+console.log(section);
+console.log(title);
+
+fetchArticleXML(`data/${section}/${title}`).then(dom => 
 {
     // Set title and subtitle
     document.getElementById("article-title").innerHTML = dom.getElementsByTagName("title")[0].innerHTML;
@@ -24,4 +34,7 @@ fetchArticleXML("data/articles/dummy.xml").then(dom =>
             addParagraph(paragraph.innerHTML)
         );
     }
+}).catch(err => {
+    console.error(err);
+    window.location.href = "index.html";
 })

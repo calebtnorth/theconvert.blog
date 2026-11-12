@@ -28,11 +28,11 @@ SOFTWARE.
 
 *
 {
-    --section-vpadding:             5%;
-    --section-hpadding:             0%;
+    --section-vpadding:     5%;
+    --section-hpadding:     0%;
 
-    --entry-vpadding:               7.5px;
-    --entry-hpadding:               25%;
+    --entry-vpadding:       7.5px;
+    --entry-hpadding:       25%;
 }
 
 #body-content
@@ -119,7 +119,7 @@ SOFTWARE.
     /* Children */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -164,6 +164,8 @@ SOFTWARE.
     width: 100%;
 
     /* Decoration */
+    text-decoration: none !important;
+    color: black;
     cursor: pointer;
     border: 2px solid transparent !important;
 
@@ -194,7 +196,7 @@ SOFTWARE.
 {
     /* Position and Sizing */
     position: absolute;
-    left: calc(var(--site-padding) / 2);
+    left: calc(var(--site-padding) / 4);
 
     /* Decoration */
     color: red;
@@ -210,7 +212,7 @@ SOFTWARE.
 {
     /* Position and Spacing */
     position: absolute;
-    right: calc(var(--site-padding) / 2);
+    right: calc(var(--site-padding) / 4);
 
     height: var(--icon-size) !important;
 
