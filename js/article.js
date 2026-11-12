@@ -36,5 +36,5 @@ fetchArticleXML(`data/${section}/${title}`).then(dom =>
     }
 }).catch(err => {
     console.error(err);
-    window.location.href = "index.html";
+    window.location.href = "/";
 })
