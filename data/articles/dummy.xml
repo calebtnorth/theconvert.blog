@@ -1,31 +1,10 @@
 <root>
     <head>
-        <date>1970-01-01</date>
-        <title>Lorem Ipsum</title>
+        <date>Jan 01, 2001</date>
+        <title>Dummy Title</title>
         <subtitle>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</subtitle>
     </head>
     <body>
-        <paragraph> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
-        <paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
-        </paragraph>
         <paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nisl ultricies eros imperdiet elementum. Donec ac eleifend eros. Donec at elit arcu. Vestibulum magna dui, volutpat in sapien eget, hendrerit bibendum nisi. In fringilla, erat vitae pellentesque egestas, nunc risus placerat elit, at porttitor est justo eget leo. Nulla sit amet enim in mi cursus tempor. Donec porttitor scelerisque aliquet. Suspendisse ut velit maximus, tincidunt purus eget, auctor quam. Aenean leo quam, dictum nec nisl tempus, condimentum tincidunt neque. Maecenas dictum quam ac dolor gravida, vel convallis massa scelerisque. Quisque eleifend tellus a orci lacinia, eu facilisis massa tristique. 
         </paragraph>

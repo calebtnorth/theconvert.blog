@@ -15,7 +15,7 @@ if (navigator.maxTouchPoints > 0)
 // *************** //
 
 
-function fetchArticleManifest(path)
+function fetchFile(path)
 {
     return fetch(path)
         .then(response => { return response.text() })
@@ -24,14 +24,15 @@ function fetchArticleManifest(path)
         });
 }
 
-
 function fetchArticleXML(path)
 {
-    return fetch(path)
-        .then(response => { return response.text() })
-        .then(text => {
-            return new DOMParser().parseFromString(text, "application/xml");
-        });
+    return fetchFile(path).then(text => {
+        return new DOMParser().parseFromString(text, "application/xml");
+    });
 }
 
-fetchArticleManifest("data/manifest.json").then(x=>{console.log(x);});
+function fetchAllArticles(path)
+{
+
+    
+}
