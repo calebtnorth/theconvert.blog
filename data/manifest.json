@@ -2,14 +2,10 @@
     "sections":
     [
         {
-            "title": "articles",
+            "title": "talks",
             "paths":
             [
-                "dummy.xml",
-                "dummy.xml",
-                "dummy.xml",
-                "dummy.xml",
-                "dummy.xml"
+                "ppf.xml"
             ]
         }
     ]

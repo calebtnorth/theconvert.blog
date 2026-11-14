@@ -145,10 +145,11 @@ body
     /* Position and Sizing */
     position: relative;
     width: 60vw;
+    height: min-content;
     box-sizing: content-box;
 }
 
-#article-content-paragraphs p
+.article-paragraph
 {
     /* Position and Sizing */
     margin-bottom: var(--p-text-font-size) !important;
@@ -156,6 +157,11 @@ body
     /* Decoration */
     text-align: justify;
     text-justify: newspaper;
+}
+
+.article-paragraph:has(.indent)
+{
+    margin-left: var(--p-text-font-size) !important;
 }
 
 /********************/
