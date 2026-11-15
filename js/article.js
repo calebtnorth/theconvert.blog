@@ -1,6 +1,19 @@
+const params = new URLSearchParams(window.location.search);
+let section = params.get('section');
+let article = params.get('article');
+
+
+// Link Copying Function
+function copyLink()
+{
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(`https://theconvert.blog?shared&s=${section}&a=${article}`);
+    alert("Copied to clipboard");
+}
+
+
 // Create div object to place the XML content in
 function generateParagraph(content) {
-
     let div = document.createElement("div");
     
     div.classList.add("article-paragraph");
@@ -11,30 +24,26 @@ function generateParagraph(content) {
 
 
 // Load article
-const params = new URLSearchParams(window.location.search);
+fetchArticleXML(`data/${section}/${article}/article.xml`)
+    .then(dom => {
 
-let section = params.get('section');
-let article = params.get('article');
+        // Set title and subtitle
+        let title = dom.getElementsByTagName("title")[0].innerHTML
 
-fetchArticleXML(`data/${section}/${article}/article.xml`).then(dom => {
+        document.getElementById("article-title").innerHTML = title;
+        document.getElementsByTagName("title")[0].innerHTML = "The Convert / " + title;
 
-    // Set title and subtitle
-    let title = dom.getElementsByTagName("title")[0].innerHTML
+        document.getElementById("article-subtitle").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
 
-    document.getElementById("article-title").innerHTML = title;
-    document.getElementsByTagName("title")[0].innerHTML = "The Convert / " + title;
+        // Fill paragraphs out
+        for (paragraph of dom.getElementsByTagName("p"))
+        {
+            document.getElementById("article-content").appendChild(
+                generateParagraph(paragraph.outerHTML)
+            );
+        }
 
-    document.getElementById("article-subtitle").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
-
-    // Fill paragraphs out
-    for (paragraph of dom.getElementsByTagName("p"))
-    {
-        document.getElementById("article-content").appendChild(
-            generateParagraph(paragraph.outerHTML)
-        );
-    }
-
-}).catch(err => {
-    console.error(err);
-    window.location.href = "/";
-})
+    }).catch(err => {
+        console.error(err);
+        // window.location.href = "/";
+    })

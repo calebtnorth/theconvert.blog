@@ -1,3 +1,17 @@
+// Redirect Function
+function redirectIfNeeded() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("shared"))
+    {
+        let section = params.get("s");
+        let article = params.get("a");
+
+        window.location.href = `${window.location.origin}/article.html?section=${section}&article=${article}`;
+    }
+}
+
+
+// Creation Functions
 function addSection(section_title) {
     var element = document.importNode(
         document.querySelector("#section-template").content, true
@@ -49,4 +63,6 @@ async function fetchArticles() {
     }
 }
 
+redirectIfNeeded();
 fetchArticles().catch(err => console.error(err));
+
