@@ -14,14 +14,18 @@ function generateParagraph(content) {
 const params = new URLSearchParams(window.location.search);
 
 let section = params.get('section');
-let title = params.get('title');
+let article = params.get('article');
 
-fetchArticleXML(`data/${section}/${title}`).then(dom => {
+fetchArticleXML(`data/${section}/${article}/article.xml`).then(dom => {
 
     // Set title and subtitle
-    document.getElementById("article-title").innerHTML = dom.getElementsByTagName("title")[0].innerHTML;
+    let title = dom.getElementsByTagName("title")[0].innerHTML
+
+    document.getElementById("article-title").innerHTML = title;
+    document.getElementsByTagName("title")[0].innerHTML = "The Convert / " + title;
+
     document.getElementById("article-subtitle").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
-    console.log(dom);
+
     // Fill paragraphs out
     for (paragraph of dom.getElementsByTagName("p"))
     {

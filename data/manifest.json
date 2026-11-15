@@ -2,11 +2,8 @@
     "sections":
     [
         {
-            "title": "talks",
-            "paths":
-            [
-                "ppf.xml"
-            ]
+            "title": "articles",
+            "articles": ["ppf"]
         }
     ]
 }

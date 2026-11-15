@@ -28,3 +28,12 @@ body
 {
     overflow: hidden;
 }
+
+@media screen and (aspect-ratio < 1.2) {
+
+    html[data-platform="mobile"] *
+    {
+        --icon-size: 72px;
+    }
+
+}

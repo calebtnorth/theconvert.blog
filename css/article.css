@@ -162,14 +162,12 @@ body
 .article-paragraph:has(.indent)
 {
     margin-left: var(--p-text-font-size) !important;
+    margin-right: var(--p-text-font-size) !important;
 }
 
 /********************/
 /* MOBILE OVERRIDES */
 /********************/
-
-
-
 
 
 @media screen and (aspect-ratio < 1.2) {

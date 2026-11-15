@@ -34,12 +34,12 @@ async function fetchArticles() {
         const newSection = addSection(section.title);
         
         // ... and add the children.
-        for (const articlePath of section.paths) {
+        for (const articlePath of section.articles) {
 
-            const dom = await fetchArticleXML(`data/${section.title}/${articlePath}`);
+            const dom = await fetchArticleXML(`data/${section.title}/${articlePath}/article.xml`);
 
             newSection.appendChild(addEntry(
-                `article.html?section=${section.title}&title=${articlePath}`,
+                `article.html?section=${section.title}&article=${articlePath}`,
                 dom.getElementsByTagName("title")[0].textContent,
                 dom.getElementsByTagName("date")[0].textContent
             ));

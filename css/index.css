@@ -187,6 +187,8 @@ SOFTWARE.
 }
 .entry-title
 {
+    /* Decoration */
+    text-align: left;
     font-size: var(--h3-title-font-size);
     font-weight: 700;
 }
