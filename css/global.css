@@ -33,7 +33,11 @@ body
 
     html[data-platform="mobile"] *
     {
-        --icon-size: 72px;
+        --h1-title-font-size:   72px !important;
+        --h3-title-font-size:   48px !important;
+        --p-text-font-size:     32px !important;
+        
+        --icon-size: 48px !important;
     }
 
 }
