@@ -112,9 +112,14 @@ body
     color: red;
 }
 
+#article-overview-buttons
+{
+    align-items: center;
+}
 #article-overview-buttons *
 {
     cursor: pointer;
+    text-decoration: none !important;
 }
 #article-download
 {

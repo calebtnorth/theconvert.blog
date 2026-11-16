@@ -11,6 +11,12 @@ function copyLink()
     alert("Copied to clipboard");
 }
 
+// Downloading function
+function downloadPDF()
+{
+
+}
+
 
 // Create div object to place the XML content in
 function generateParagraph(content) {
@@ -34,6 +40,11 @@ fetchArticleXML(`data/${section}/${article}/article.xml`)
         document.getElementsByTagName("title")[0].innerHTML = "The Convert / " + title;
 
         document.getElementById("article-subtitle").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
+
+        // Set the download button
+        let downloadButton = document.getElementById("article-download");
+        downloadButton.href = `data/${section}/${article}/pdf_download.pdf`;
+        downloadButton.download = `${title}`;
 
         // Fill paragraphs out
         for (paragraph of dom.getElementsByTagName("p"))
