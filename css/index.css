@@ -32,7 +32,7 @@ SOFTWARE.
     --section-hpadding:     0%;
 
     --entry-vpadding:       7.5px;
-    --entry-hpadding:       25%;
+    --entry-hpadding:       20%;
 }
 
 #body-content
@@ -191,6 +191,21 @@ SOFTWARE.
     text-align: left;
     font-size: var(--h3-title-font-size);
     font-weight: 700;
+}
+.entry-body-details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.entry-body-details *
+{
+    padding-right: var(--p-text-font-size) !important;
+}
+.entry-author-name
+{
+    color: red !important;
 }
 
 /* New Text */

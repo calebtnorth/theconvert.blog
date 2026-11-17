@@ -22,7 +22,7 @@ function addSection(section_title) {
 }
 
 
-function addEntry(url, title, subtitle) {
+function addEntry(url, title, subtitle, author) {
     var element = document.importNode(
         document.querySelector("#entry-template").content, true
     );
@@ -30,7 +30,8 @@ function addEntry(url, title, subtitle) {
     // Set up element
     element.querySelector(".section-entry").href = url;
     element.querySelector(".entry-title").textContent = title.toUpperCase();
-    element.querySelector(".entry-subtitle").textContent = subtitle.toUpperCase();
+    element.querySelector(".entry-date").textContent = subtitle.toUpperCase();
+    element.querySelector(".entry-author-name").textContent = author.toUpperCase();
 
     return element;
 }
@@ -55,7 +56,8 @@ async function fetchArticles() {
             newSection.appendChild(addEntry(
                 `article.html?section=${section.title}&article=${articlePath}`,
                 dom.getElementsByTagName("title")[0].textContent,
-                dom.getElementsByTagName("date")[0].textContent
+                dom.getElementsByTagName("date")[0].textContent,
+                dom.getElementsByTagName("author")[0].textContent
             ));
         }
 
