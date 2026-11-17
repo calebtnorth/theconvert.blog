@@ -7,14 +7,8 @@ let article = params.get('article');
 function copyLink()
 {
     // Copy the text inside the text field
-    navigator.clipboard.writeText(`https://theconvert.blog?shared&s=${section}&a=${article}`);
+    navigator.clipboard.writeText(generateSharingURL(section, article));
     alert("Copied to clipboard");
-}
-
-// Downloading function
-function downloadPDF()
-{
-
 }
 
 

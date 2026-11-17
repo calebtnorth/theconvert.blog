@@ -1,5 +1,15 @@
 // JavaScript shared between all pages of the website
 
+// ******* //
+// Sharing //
+// ******* //
+
+function generateSharingURL(section, article)
+{
+    return `https://theconvert.blog?shared&s=${section}&a=${article}`;
+}
+
+
 // ************ //
 // Mobile Check //
 // ************ //

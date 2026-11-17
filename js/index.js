@@ -12,12 +12,13 @@ function redirectIfNeeded() {
 
 
 // Creation Functions
-function addSection(section_title) {
+function addSection(section_json) {
     var element = document.importNode(
         document.querySelector("#section-template").content, true
     );
 
-    element.querySelector(".section-title").textContent = section_title.toUpperCase();
+    element.querySelector(".section-title").textContent = section_json['title'].toUpperCase();
+
     return element;
 }
 
@@ -28,8 +29,9 @@ function addEntry(url, title, subtitle, author) {
     );
 
     // Set up element
-    element.querySelector(".section-entry").href = url;
+    element.querySelector(".section-entry-wrapper").href = url;
     element.querySelector(".entry-title").textContent = title.toUpperCase();
+
     element.querySelector(".entry-date").textContent = subtitle.toUpperCase();
     element.querySelector(".entry-author-name").textContent = author.toUpperCase();
 
@@ -43,25 +45,32 @@ async function fetchArticles() {
     const sections  = document.getElementById("sections");
 
     // For each section ...
-    for (const section of json.sections) {
-
+    for (const sectionJSON of json.sections) {
         // ... create the node and set the title ...
-        const newSection = addSection(section.title);
-        
+        sections.appendChild(
+            addSection(sectionJSON)
+        );
+    }
+
+    // This is split because if this was nested in the above loop, the DOM freaks out
+    // and doesn't add the children in the order needed for the CSS to function
+
+    let section_index = 2;
+    for (const sectionJSON of json.sections) {
+
         // ... and add the children.
-        for (const articlePath of section.articles) {
+        for (const articlePath of sectionJSON.articles) {
 
-            const dom = await fetchArticleXML(`data/${section.title}/${articlePath}/article.xml`);
-
-            newSection.appendChild(addEntry(
-                `article.html?section=${section.title}&article=${articlePath}`,
+            const dom = await fetchArticleXML(`data/${sectionJSON.title}/${articlePath}/article.xml`);
+            sections.children[section_index].appendChild(addEntry(
+                `article.html?section=${sectionJSON.title}&article=${articlePath}`,
                 dom.getElementsByTagName("title")[0].textContent,
                 dom.getElementsByTagName("date")[0].textContent,
                 dom.getElementsByTagName("author")[0].textContent
             ));
         }
-
-        sections.appendChild(newSection);
+        section_index++;
+     
     }
 }
 
