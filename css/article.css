@@ -106,9 +106,20 @@ body
     font-size: var(--h1-title-font-size);
     font-weight: 600;
 }
-#article-subtitle
+#article-overview-details
 {
-    font-size: var(--h3-title-font-size);
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: baseline;
+}
+#article-overview-details *
+{
+    font-size: var(--p-text-font-size);
+    padding-right: var(--p-text-font-size) !important;
+}
+#article-author-name
+{
     color: red;
 }
 

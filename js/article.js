@@ -39,7 +39,7 @@ fetchArticleXML(`data/${section}/${article}/article.xml`)
         document.getElementById("article-title").innerHTML = title;
         document.getElementsByTagName("title")[0].innerHTML = "The Convert / " + title;
 
-        document.getElementById("article-subtitle").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
+        document.getElementById("article-date").innerHTML = dom.getElementsByTagName("date")[0].innerHTML;
 
         // Set the download button
         let downloadButton = document.getElementById("article-download");
