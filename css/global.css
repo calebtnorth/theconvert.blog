@@ -1,7 +1,7 @@
 *
 {
     /* Global Variables */
-    --site-padding:         10vh;
+    --site-padding:         5vh;
 
     --animation-time:       333ms;
     --icon-size:            24px;
@@ -30,6 +30,11 @@ body
 }
 
 @media screen and (aspect-ratio < 1.2) {
+
+    *
+    {
+        --site-padding: 10vh;
+    }
 
     html[data-platform="mobile"] *
     {
