@@ -29,10 +29,10 @@ SOFTWARE.
 *
 {
     --section-vpadding:     5%;
-    --section-hpadding:     0%;
+    --section-hpadding:     20%;
 
     --entry-vpadding:       7.5px;
-    --entry-hpadding:       20%;
+    --entry-hpadding:       5vw;
 }
 
 #body-content
@@ -113,7 +113,7 @@ SOFTWARE.
     overflow-y: scroll !important;
     overflow-x: hidden !important;
 
-    padding: var(--site-padding) !important;
+    padding: calc(var(--section-vpadding) / 2) calc(var(--entry-hpadding) / 2) !important;
     box-sizing: border-box;
 
     /* Children */
@@ -127,7 +127,7 @@ SOFTWARE.
 .section
 {
     /* Positiong and Sizing */
-    padding: var(--section-vpadding) var(--section-hpadding) !important;
+    padding: calc(var(--section-vpadding) / 2) calc(var(--section-hpadding) / 2) !important;
     box-sizing: border-box;
     width: 100%;
 }
@@ -218,7 +218,7 @@ SOFTWARE.
 {
     /* Position and Sizing */
     position: absolute;
-    left: calc(var(--site-padding) / 2);
+    left: calc(var(--entry-hpadding) / 4);
 
     /* Decoration */
     color: red;
@@ -229,19 +229,6 @@ SOFTWARE.
     display: none;
 }
 
-/* Share Button */
-.entry-share
-{
-    /* Position and Spacing */
-    position: absolute;
-    right: calc(var(--site-padding) / 4);
-
-    height: var(--icon-size) !important;
-
-    /* Decoration */    
-    opacity: 0;
-    transition: opacity var(--animation-time);
-}
 .section-entry:hover .entry-share
 {
     opacity: 1;
@@ -261,10 +248,12 @@ SOFTWARE.
 
     * {
         --site-padding: 5%;
-        --section-padding: 10%;
+
+        --section-vpadding: 10%;
+        --section-hpadding: 10%;
 
         --entry-vpadding: 10px;
-        --entry-hpadding: 20px;
+        --entry-hpadding: 5vw;
     }
 
     body
