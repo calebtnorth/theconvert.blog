@@ -34,11 +34,6 @@ SOFTWARE.
     font-size: var(--p-text-font-size);
 }
 
-body
-{
-    overflow-y: scroll !important;
-}
-
 #body-content
 {
     /* Position and Sizing */
